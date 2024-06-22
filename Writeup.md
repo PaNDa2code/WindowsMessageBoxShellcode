@@ -6,8 +6,6 @@ In this write-up i ll show you how we can make windows MessageBox Shellcode in c
 
 First thing you should know about is TEB "Thread Environment Block".
 
-
-> [!NOTE] Microsoft Docs
 > The Thread Environment Block (TEB) structure describes the state of a thread.
 
 
