@@ -39,7 +39,7 @@ And the `gs` register is a pointer to the current `TEB`, so `PEB` pointer is gs 
 
 So based on that. We can get the address of PEB like that:
 ```asm
-mov		rax, [gs + 0x60]
+mov	rax, [gs + 0x60]
 ```
 
 Gnu compilers have a micro can do the same in c called `__readgsqword`:
