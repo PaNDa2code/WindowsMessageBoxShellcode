@@ -35,8 +35,7 @@ In x86_64 architecture windows holds the address of the `TEB` in spical register
 `PVOID` is just a 8 bytes pointer (in x64) so the size of the first field is 8x12 = 96 bytes.
 So the pointer of the PEB is located 96 bytes away from the `PTEB` (`PTEB` + 96 = `PPEB`).
 And the `gs` register is a pointer to the current `TEB`, so `PEB` pointer is gs + 96 (`PPEB` = gs + 96).
-:
-![[diagrams/TEB.png]]
+!(TEB diagram)[diagrams/TEB.png]
 
 So based on that. We can get the address of PEB like that:
 ```asm
@@ -76,5 +75,4 @@ typedef struct _PEB {
 ```
 
 
-
-![[diagrams/GetKernel32.dll.drawio.svg]]
+!(TEB diagram)[diagrams/GetKernel32.dll.drawio.svg]
